@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0F52F529ACE93E00835035 /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F52F429ACE93E00835035 /* Puzzle.swift */; };
 		FAAF5E7429ACCCC500DFDDD5 /* LevelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF5E7329ACCCC500DFDDD5 /* LevelsVC.swift */; };
 		FAAF5E7629ACCD0C00DFDDD5 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF5E7529ACCD0C00DFDDD5 /* SettingsVC.swift */; };
 		FAAF5E7829ACD28E00DFDDD5 /* FirstLevelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF5E7729ACD28E00DFDDD5 /* FirstLevelVC.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA0F52F429ACE93E00835035 /* Puzzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
 		FAAF5E7329ACCCC500DFDDD5 /* LevelsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsVC.swift; sourceTree = "<group>"; };
 		FAAF5E7529ACCD0C00DFDDD5 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		FAAF5E7729ACD28E00DFDDD5 /* FirstLevelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLevelVC.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		FADF30CC29ACB7A00073D577 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA0F52F429ACE93E00835035 /* Puzzle.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAAF5E7829ACD28E00DFDDD5 /* FirstLevelVC.swift in Sources */,
+				FA0F52F529ACE93E00835035 /* Puzzle.swift in Sources */,
 				FADF30BB29ACB3CA0073D577 /* MainViewController.swift in Sources */,
 				FAAF5E7429ACCCC500DFDDD5 /* LevelsVC.swift in Sources */,
 				FADF30B729ACB3CA0073D577 /* AppDelegate.swift in Sources */,
