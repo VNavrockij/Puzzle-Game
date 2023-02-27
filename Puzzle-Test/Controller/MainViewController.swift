@@ -40,6 +40,9 @@ class MainViewController: UIViewController {
         
     }
     
+    @IBAction func pressedRulesBtn(_ sender: UIButton) {
+        
+    }
     
     
 }

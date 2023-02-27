@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FAAF5E7429ACCCC500DFDDD5 /* LevelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF5E7329ACCCC500DFDDD5 /* LevelsVC.swift */; };
+		FAAF5E7629ACCD0C00DFDDD5 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF5E7529ACCD0C00DFDDD5 /* SettingsVC.swift */; };
+		FAAF5E7829ACD28E00DFDDD5 /* FirstLevelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF5E7729ACD28E00DFDDD5 /* FirstLevelVC.swift */; };
 		FADF30B729ACB3CA0073D577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADF30B629ACB3CA0073D577 /* AppDelegate.swift */; };
 		FADF30B929ACB3CA0073D577 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADF30B829ACB3CA0073D577 /* SceneDelegate.swift */; };
 		FADF30BB29ACB3CA0073D577 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADF30BA29ACB3CA0073D577 /* MainViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FAAF5E7329ACCCC500DFDDD5 /* LevelsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsVC.swift; sourceTree = "<group>"; };
+		FAAF5E7529ACCD0C00DFDDD5 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		FAAF5E7729ACD28E00DFDDD5 /* FirstLevelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLevelVC.swift; sourceTree = "<group>"; };
 		FADF30B329ACB3CA0073D577 /* Puzzle-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Puzzle-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADF30B629ACB3CA0073D577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FADF30B829ACB3CA0073D577 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				FADF30BA29ACB3CA0073D577 /* MainViewController.swift */,
+				FAAF5E7329ACCCC500DFDDD5 /* LevelsVC.swift */,
+				FAAF5E7529ACCD0C00DFDDD5 /* SettingsVC.swift */,
+				FAAF5E7729ACD28E00DFDDD5 /* FirstLevelVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,9 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAF5E7829ACD28E00DFDDD5 /* FirstLevelVC.swift in Sources */,
 				FADF30BB29ACB3CA0073D577 /* MainViewController.swift in Sources */,
+				FAAF5E7429ACCCC500DFDDD5 /* LevelsVC.swift in Sources */,
 				FADF30B729ACB3CA0073D577 /* AppDelegate.swift in Sources */,
 				FADF30B929ACB3CA0073D577 /* SceneDelegate.swift in Sources */,
+				FAAF5E7629ACCD0C00DFDDD5 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
