@@ -10,22 +10,71 @@ import UIKit
 class FirstLevelVC: UIViewController {
     
     @IBOutlet weak var timerLabel: UILabel!
-    
     @IBOutlet weak var collectiomView: UICollectionView!
     
     var index: Int = 0
     var gameTimer: Timer?
+    var totalTime = 180
+    var secondsRemaining = 5
+    
+    override func viewWillAppear(_ animated: Bool) {
+        timerLabel.text = ""
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         PuzzlesForFirstLvl.puzzles.shuffle()
-        
         customCollectionView()
-        
         let longPressedGesture = UILongPressGestureRecognizer(target: self,
                                                               action: #selector(handleLongPressedGesture))
         collectiomView.addGestureRecognizer(longPressedGesture)
+        gameTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTimer() {
+        timerLabel.text = ""
+        if secondsRemaining > 1 {
+            let sec = secondsToMinutesSeconds(seconds: secondsRemaining)
+            print("\(sec) seconds")
+            secondsRemaining -= 1
+//            totalTime = secondsRemaining
+            
+            DispatchQueue.main.async {
+                self.timerLabel.text = String(sec.m) + ":" + String(sec.s)
+            }
+            
+        } else {
+            gameTimer!.invalidate()
+            switchToLoseScreen()
+            timerLabel.text = ""
+        }
+    }
+    
+    func switchToLoseScreen() {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        if let viewController = mainStoryboard.instantiateViewController(withIdentifier: "LevelFailed") as? LevelFailed {
+            self.present(viewController, animated: true, completion: nil)
+        }
+    }
+    
+    func switchToCompleteScreen(_ timer: Int) {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        if let viewController = mainStoryboard.instantiateViewController(withIdentifier: "LevelCompleted") as? LevelCompleted {
+            
+            let seconds = totalTime - secondsRemaining
+            let minutesAndSeconds = secondsToMinutesSeconds(seconds: seconds)
+            let timeToString = String(minutesAndSeconds.m) + ":" + String(minutesAndSeconds.s)
+            print("time complete - \(timeToString)")
+            
+            viewController.time = timeToString
+            
+            self.present(viewController, animated: true, completion: nil)
+        }
+    }
+    
+    func secondsToMinutesSeconds (seconds : Int) -> (m : Int, s : Int){
+        return ((seconds % 3600) / 60, (seconds % 3600) % 60)
     }
     
     @objc private func handleLongPressedGesture(_ gesture: UILongPressGestureRecognizer) {
@@ -84,6 +133,16 @@ extension FirstLevelVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let item = PuzzlesForFirstLvl.puzzles.remove(at: sourceIndexPath.row)
         PuzzlesForFirstLvl.puzzles.insert(item, at: destinationIndexPath.row)
+        checkSequence(PuzzlesForFirstLvl.puzzles)
+    }
+    
+    func checkSequence(_ arrPuzzles: [String] ) {
+        if arrPuzzles == PuzzlesForFirstLvl.puzzlesCorrect {
+            gameTimer!.invalidate()
+//            print("Ok")
+            switchToCompleteScreen(secondsRemaining)
+        }
+        
     }
 }
 

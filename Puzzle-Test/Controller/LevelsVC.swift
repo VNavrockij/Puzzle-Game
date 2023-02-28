@@ -9,11 +9,7 @@ import UIKit
 
 class LevelsVC: UIViewController {
     
-    
-    
     override func viewDidLoad() {
         
     }
-    
-    
 }

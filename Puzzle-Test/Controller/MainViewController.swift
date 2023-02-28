@@ -9,15 +9,11 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    
     @IBOutlet var mainButtons: [UIButton]!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         customStyleBtn(mainButtons)
-        
     }
     
     func customStyleBtn(_ buttons: [UIButton]) {
