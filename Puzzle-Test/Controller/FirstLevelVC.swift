@@ -15,7 +15,7 @@ class FirstLevelVC: UIViewController {
     var index: Int = 0
     var gameTimer: Timer?
     var totalTime = 180
-    var secondsRemaining = 5
+    var secondsRemaining = 180
     
     override func viewWillAppear(_ animated: Bool) {
         timerLabel.text = ""
@@ -118,8 +118,6 @@ extension FirstLevelVC: UICollectionViewDataSource {
 
         return cell
     }
-    
-    
 }
 
 extension FirstLevelVC: UICollectionViewDelegateFlowLayout {
