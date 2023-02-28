@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA0F52F529ACE93E00835035 /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F52F429ACE93E00835035 /* Puzzle.swift */; };
+		FA9D8C4729AE1F53000CA4E8 /* MainGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8C4629AE1F53000CA4E8 /* MainGradient.swift */; };
+		FA9D8C4929AE1FBC000CA4E8 /* MainWordOnButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8C4829AE1FBC000CA4E8 /* MainWordOnButtons.swift */; };
+		FA9D8C4B29AE20F4000CA4E8 /* PuzzlesForFirstLvl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8C4A29AE20F4000CA4E8 /* PuzzlesForFirstLvl.swift */; };
 		FAAF5E7429ACCCC500DFDDD5 /* LevelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF5E7329ACCCC500DFDDD5 /* LevelsVC.swift */; };
 		FAAF5E7629ACCD0C00DFDDD5 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF5E7529ACCD0C00DFDDD5 /* SettingsVC.swift */; };
 		FAAF5E7829ACD28E00DFDDD5 /* FirstLevelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF5E7729ACD28E00DFDDD5 /* FirstLevelVC.swift */; };
@@ -21,7 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FA0F52F429ACE93E00835035 /* Puzzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
+		FA9D8C4629AE1F53000CA4E8 /* MainGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGradient.swift; sourceTree = "<group>"; };
+		FA9D8C4829AE1FBC000CA4E8 /* MainWordOnButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWordOnButtons.swift; sourceTree = "<group>"; };
+		FA9D8C4A29AE20F4000CA4E8 /* PuzzlesForFirstLvl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzlesForFirstLvl.swift; sourceTree = "<group>"; };
 		FAAF5E7329ACCCC500DFDDD5 /* LevelsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsVC.swift; sourceTree = "<group>"; };
 		FAAF5E7529ACCD0C00DFDDD5 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		FAAF5E7729ACD28E00DFDDD5 /* FirstLevelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLevelVC.swift; sourceTree = "<group>"; };
@@ -101,7 +105,9 @@
 		FADF30CC29ACB7A00073D577 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FA0F52F429ACE93E00835035 /* Puzzle.swift */,
+				FA9D8C4629AE1F53000CA4E8 /* MainGradient.swift */,
+				FA9D8C4829AE1FBC000CA4E8 /* MainWordOnButtons.swift */,
+				FA9D8C4A29AE20F4000CA4E8 /* PuzzlesForFirstLvl.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -187,12 +193,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAAF5E7829ACD28E00DFDDD5 /* FirstLevelVC.swift in Sources */,
-				FA0F52F529ACE93E00835035 /* Puzzle.swift in Sources */,
+				FA9D8C4729AE1F53000CA4E8 /* MainGradient.swift in Sources */,
 				FADF30BB29ACB3CA0073D577 /* MainViewController.swift in Sources */,
 				FAAF5E7429ACCCC500DFDDD5 /* LevelsVC.swift in Sources */,
 				FADF30B729ACB3CA0073D577 /* AppDelegate.swift in Sources */,
 				FADF30B929ACB3CA0073D577 /* SceneDelegate.swift in Sources */,
 				FAAF5E7629ACCD0C00DFDDD5 /* SettingsVC.swift in Sources */,
+				FA9D8C4B29AE20F4000CA4E8 /* PuzzlesForFirstLvl.swift in Sources */,
+				FA9D8C4929AE1FBC000CA4E8 /* MainWordOnButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

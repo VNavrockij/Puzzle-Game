@@ -7,29 +7,11 @@
 
 import UIKit
 
-//class ImageCollectionViewCell: UICollectionViewCell {
-//
-//    @IBOutlet weak var puzzleImage: UIImageView!
-//
-//    override func awakeFromNib() {
-//        self.frame = puzzleImage.frame
-//    }
-//
-//}
-
 class FirstLevelVC: UIViewController {
-
+    
+    @IBOutlet weak var timerLabel: UILabel!
+    
     @IBOutlet weak var collectiomView: UICollectionView!
-    
-    
-    var puzzle = Puzzle(title: "First", solvedImages: ["1", "2", "3", "4", "5", "6", "7", "8", "9.", "10", "11", "12", "13", "14", "15", "16"])
-    
-    private var colors: [UIColor] = [
-        .yellow, .systemBlue, .systemCyan, .systemGray,
-        .systemMint, .systemRed, .systemPink, .systemTeal,
-        .yellow, .systemBlue, .systemCyan, .systemGray,
-        .systemMint, .systemRed, .systemPink, .systemTeal
-    ]
     
     var index: Int = 0
     var gameTimer: Timer?
@@ -37,12 +19,9 @@ class FirstLevelVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectiomView.layer.borderWidth = 5.0
-        collectiomView.layer.borderColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1).cgColor
-        collectiomView.clipsToBounds = true
+        PuzzlesForFirstLvl.puzzles.shuffle()
         
-        collectiomView.dragInteractionEnabled = true
-
+        customCollectionView()
         
         let longPressedGesture = UILongPressGestureRecognizer(target: self,
                                                               action: #selector(handleLongPressedGesture))
@@ -66,20 +45,28 @@ class FirstLevelVC: UIViewController {
         }
     }
     
-    
-    
-    
+    func customCollectionView() {
+        collectiomView.layer.borderWidth = 5.0
+        collectiomView.layer.cornerRadius = 25
+        collectiomView.layer.borderColor = #colorLiteral(red: 1, green: 0.2527923882, blue: 1, alpha: 1).cgColor
+        collectiomView.clipsToBounds = true
+        
+        collectiomView.dragInteractionEnabled = true
+    }
 }
 
 extension FirstLevelVC: UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return colors.count
+        return PuzzlesForFirstLvl.puzzles.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = colors[indexPath.row]
+        
+        var b = UIBackgroundConfiguration.listPlainCell()
+        b.customView = UIImageView(image: UIImage(named: PuzzlesForFirstLvl.puzzles[indexPath.row] ))
+        cell.backgroundConfiguration = b
+
         return cell
     }
     
@@ -95,8 +82,8 @@ extension FirstLevelVC: UICollectionViewDelegateFlowLayout {
 
 extension FirstLevelVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let item = colors.remove(at: sourceIndexPath.row)
-        colors.insert(item, at: destinationIndexPath.row)
+        let item = PuzzlesForFirstLvl.puzzles.remove(at: sourceIndexPath.row)
+        PuzzlesForFirstLvl.puzzles.insert(item, at: destinationIndexPath.row)
     }
 }
 

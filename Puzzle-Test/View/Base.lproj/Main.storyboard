@@ -259,21 +259,21 @@
                                 <rect key="frame" x="21" y="251" width="350" height="350"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CHC-58-YEi">
-                                    <size key="itemSize" width="90" height="92"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fcE-Fv-83Q">
+                                    <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="iHI-xQ-Vw9" customClass="ImageCollectionViewCell" customModule="Puzzle_Test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="iHI-xQ-Vw9">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="B7H-m2-aio" customClass="UIImageView">
-                                            <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="B7H-m2-aio">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="95" height="95"/>
+                                        <size key="customSize" width="90" height="90"/>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -281,6 +281,13 @@
                                     <outlet property="delegate" destination="Sci-0w-h0G" id="mLN-LR-zJd"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6A1-sA-Jdg">
+                                <rect key="frame" x="113" y="135" width="167" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Knewave-Regular" family="Knewave" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Ru-lN-Toi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -294,6 +301,7 @@
                     <navigationItem key="navigationItem" id="LbK-DO-QkT"/>
                     <connections>
                         <outlet property="collectiomView" destination="JyN-vL-sXZ" id="rUE-n3-CmC"/>
+                        <outlet property="timerLabel" destination="6A1-sA-Jdg" id="frl-qD-SdN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="If2-zl-xV6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
